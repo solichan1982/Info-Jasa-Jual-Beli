@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Semua Iklan Jasa & Pendaftaran</title>
+
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+    integrity="sha256-p4NxAoJBhIINfQSi7dLyV8GiCoKmgD8+5FNnDAwNJ5Jv="
+    crossorigin=""/>
+    
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <div class="container">
+            <div class="logo">
+                <img src="logo.png" alt="Logo Website">
+                <span>Info Jual Beli</span>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Beranda</a></li>
+                    <li><a href="rumah.html">Rumah & Tanah</a></li>
+                    <li><a href="kost.html">Kost</a></li>
+                    <li><a href="kendaraan.html">Kendaraan</a></li>
+                    <li><a href="jasa.html">Jasa</a></li> </ul>
+            </nav>
+            <a href="https://wa.me/6281234567890?text=Halo,%20saya%20tertarik%20untuk%20pasang%20iklan." class="btn-iklan" target="_blank">Pasang Iklan</a>
+        </div>
+    </header>
+
+    <main>
+        <section class="page-header">
+            <div class="container">
+                <h1>Temukan Penyedia Jasa Terpercaya</h1>
+                <p>Dari perbaikan rumah hingga layanan pribadi, kami menghubungkan Anda dengan para ahli.</p>
+            </div>
+        </section>
+
+        <section class="container registration-section">
+            <div class="registration-card">
+                <h2>Ingin Menawarkan Jasa Anda di Sini?</h2>
+                <p>Jadilah bagian dari jaringan penyedia jasa terpercaya kami! Isi formulir pendaftaran di bawah ini untuk memulai.</p>
+                <p>Kami akan meninjau data Anda demi keamanan dan kualitas layanan.</p>
+                <a href="https://forms.gle/bD4csvmcSSL5HRWk6" target="_blank" class="btn-register-jasa">
+                    Daftar Sebagai Penyedia Jasa
+                </a>
+                <p class="note">Catatan: Data yang tidak lengkap atau tidak sesuai kriteria tidak akan disetujui.</p>
+            </div>
+        </section>
+
+        <section class="container property-grid-section">
+            <div class="property-grid">
+                <section class="property-column" id="jasa-rumah-tangga">
+                    <h2>Jasa Rumah Tangga</h2>
+                    
+                    <div class="property-listing" data-lat="-6.2100" data-lon="106.8200" data-name="Tukang Genteng Pak Budi" data-address="Area Jakarta Selatan" data-type="jasa">
+                        <img src="tukang_genteng.jpg" alt="Tukang Genteng Pak Budi" class="property-image">
+                        <h3>Tukang Genteng Pak Budi</h3>
+                        <p>Ahli perbaikan genteng bocor, pasang rangka atap, dan renovasi kecil. Pengalaman 15+ tahun.</p>
+                        <p><strong>Layanan:</strong> Perbaikan Atap, Pasang Kanopi</p>
+                        <p class="coordinates">
+                            <span>Area Layanan: Jakarta Selatan & Timur</span>
+                            <button class="show-on-map" data-target-lat="-6.2100" data-target-lon="106.8200">Lihat di Peta</button>
+                        </p>
+                    </div>
+                    <div class="property-listing" data-lat="-6.208763" data-lon="106.845599" data-name="Rumah Modern Jakarta Pusat" data-address="Jl. Sudirman No. 10, Jakarta Pusat" data-type="rumah">
+    <img src="rumah1.jpg" alt="Rumah Modern Jakarta Pusat" class="property-image">
+    <h3>Rumah Modern Jakarta Pusat</h3>
+    <p>Rumah 2 lantai dengan desain modern, 3 kamar tidur, 2 kamar mandi. Lokasi strategis dekat pusat kota dan transportasi umum.</p>
+    <p><strong>Lokasi:</strong> Jakarta Pusat</p>
+    <p class="coordinates">
+        Koordinat: -6.208763, 106.845599
+    </p>
+    <div class="listing-actions">
+        <button class="show-on-map" data-target-lat="-6.208763" data-target-lon="106.845599">Lihat di Peta</button>
+        <a href="https://wa.me/6281234567890?text=Halo,%20saya%20tertarik%20dengan%20iklan%20Rumah%20Modern%20Jakarta%20Pusat%20yang%20Anda%20pasang." target="_blank" class="btn-action btn-whatsapp">
+            <img src="whatsapp-logo.png" alt="WhatsApp" style="width: 16px; height: 16px; vertical-align: middle; margin-right: 5px;"> WhatsApp
+        </a>
+        <a href="tel:+6281234567890" class="btn-action btn-phone">
+            <img src="phone-icon.png" alt="Telepon" style="width: 16px; height: 16px; vertical-align: middle; margin-right: 5px;"> Telepon
+        </a>
+    </div>
+    </div>
+
+
+                    <div class="property-listing" data-lat="-6.9000" data-lon="107.6000" data-name="Bersih Bersih Bandung" data-address="Area Bandung Kota" data-type="jasa">
+                        <img src="jasa_kebersihan.jpg" alt="Bersih Bersih Bandung" class="property-image">
+                        <h3>Bersih Bersih Bandung</h3>
+                        <p>Jasa bersih-bersih rumah/kantor harian atau mingguan. Peralatan lengkap.</p>
+                        <p><strong>Layanan:</strong> Deep Cleaning, General Cleaning</p>
+                        <p class="coordinates">
+                            <span>Area Layanan: Bandung Kota</span>
+                            <button class="show-on-map" data-target-lat="-6.9000" data-target-lon="107.6000">Lihat di Peta</button>
+                        </p>
+                    </div>
+                </section>
+
+                <section class="property-column" id="jasa-teknik">
+                    <h2>Jasa Teknik & Lainnya</h2>
+                    
+                    <div class="property-listing" data-lat="-7.2700" data-lon="112.7300" data-name="Ahli AC Surabaya" data-address="Area Surabaya Barat" data-type="jasa">
+                        <img src="jasa_ac.jpg" alt="Ahli AC Surabaya" class="property-image">
+                        <h3>Ahli AC Surabaya</h3>
+                        <p>Service, cuci, isi freon, bongkar pasang AC semua merek. Bergaransi 1 bulan.</p>
+                        <p><strong>Layanan:</strong> Perbaikan AC, Instalasi</p>
+                        <p class="coordinates">
+                            <span>Area Layanan: Surabaya</span>
+                            <button class="show-on-map" data-target-lat="-7.2700" data-target-lon="112.7300">Lihat di Peta</button>
+                        </p>
+                    </div>
+
+                    <div class="property-listing" data-lat="-7.8000" data-lon="110.3800" data-name="Jasa Sedot WC Yogya" data-address="Area Sleman" data-type="jasa">
+                        <img src="jasa_sedot_wc.jpg" alt="Jasa Sedot WC Yogya" class="property-image">
+                        <h3>Jasa Sedot WC Yogya</h3>
+                        <p>Layanan sedot WC dan perbaikan saluran mampet 24 jam. Respon cepat.</p>
+                        <p><strong>Layanan:</strong> Sedot WC, Saluran Mampet</p>
+                        <p class="coordinates">
+                            <span>Area Layanan: Yogyakarta & Sekitarnya</span>
+                            <button class="show-on-map" data-target-lat="-7.8000" data-target-lon="110.3800">Lihat di Peta</button>
+                        </p>
+                    </div>
+                </section>
+            </div>
+        </section>
+
+        <section class="container map-section">
+            <h2>Lokasi Penyedia Jasa di Peta</h2>
+            <div id="map"></div>
+        </section>
+        
+    </main>
+
+    <a href="https://wa.me/6281234567890?text=Halo,%20saya%20mau%20tanya-tanya." class="whatsapp-fab" target="_blank">
+        <img src="whatsapp-logo.png" alt="Chat di WhatsApp">
+        <span class="fab-text">Pasang Iklan di Sini</span>
+    </a>
+
+    <footer>
+        <p>&copy; 2025 Info Jual Beli. Semua Hak Cipta Dilindungi.</p>
+    </footer>
+
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+    integrity="sha256-p4NxAoJBhIINfQSi7dLyV8GiCoKmgD8+5FNnDAwNJ5Jv="
+    crossorigin=""></script>
+    
+    <script src="script.js"></script>
+</body>
+</html>

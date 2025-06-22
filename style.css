@@ -1,0 +1,684 @@
+/* Import Font dari Google */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+
+/* Pengaturan Dasar */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #f0f8ff; /* Warna latar belakang biru muda cerah */
+    color: #333;
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Header & Navigasi */
+header {
+    background-color: #ffffff;
+    padding: 15px 0;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+}
+
+.logo img {
+    height: 40px;
+    margin-right: 10px;
+}
+
+.logo span {
+    font-size: 1.5em;
+    font-weight: 700;
+    color: #007bff; /* Biru */
+}
+
+/* Gaya untuk Navigasi Utama di Desktop */
+nav.main-nav ul { /* Menggunakan class main-nav */
+    list-style: none;
+    display: flex; /* Default: horizontal */
+    margin: 0;
+    padding: 0;
+}
+
+nav.main-nav ul li {
+    margin-left: 25px;
+}
+
+nav.main-nav ul li a {
+    text-decoration: none;
+    color: #333;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+nav.main-nav ul li a:hover {
+    color: #28a745; /* Hijau */
+}
+
+.btn-iklan {
+    background-color: #28a745; /* Hijau */
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: background-color 0.3s ease;
+}
+
+.btn-iklan:hover {
+    background-color: #218838;
+}
+
+/* Hamburger Menu & Navigasi Mobile (Desktop: hidden) */
+.menu-toggle {
+    display: none; /* Sembunyikan secara default untuk desktop */
+    flex-direction: column;
+    justify-content: space-around;
+    width: 30px;
+    height: 25px;
+    cursor: pointer;
+    z-index: 1001; /* Pastikan di atas nav saat dibuka */
+}
+
+.hamburger {
+    width: 100%;
+    height: 3px;
+    background-color: #333; /* Warna garis hamburger */
+    border-radius: 2px;
+    transition: all 0.3s ease-in-out;
+}
+
+
+/* Slider Utama */
+.hero-slider {
+    width: 100%;
+    height: 60vh; /* Tinggi slider utama */
+    margin-bottom: 40px;
+}
+
+.main-slider .swiper-slide img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Agar gambar tidak gepeng */
+}
+
+/* Kategori & Slider Item */
+.category {
+    margin-bottom: 50px;
+}
+
+.category h2 {
+    font-size: 2em;
+    color: #0056b3; /* Biru Tua */
+    margin-bottom: 20px;
+    border-left: 5px solid #28a745;
+    padding-left: 15px;
+}
+
+.item-slider {
+    padding: 10px 0;
+}
+
+.item-card {
+    background: #fff;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease;
+}
+
+.item-card:hover {
+    transform: translateY(-5px);
+}
+
+.item-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.item-card h3, .item-card p, .item-card .price {
+    padding: 0 15px;
+}
+
+.item-card h3 {
+    margin-top: 15px;
+    font-size: 1.2em;
+}
+
+.item-card p {
+    font-size: 0.9em;
+    color: #666;
+    margin: 10px 0;
+    height: 40px; /* Batasi tinggi deskripsi */
+}
+
+.item-card .price {
+    font-size: 1.3em;
+    font-weight: 700;
+    color: #28a745;
+    margin-bottom: 20px;
+}
+
+.btn-lihat-semua {
+    display: inline-block;
+    margin-top: 20px;
+    background: #007bff;
+    color: #fff;
+    padding: 12px 25px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+/* Tombol WhatsApp Melayang (FAB) */
+.whatsapp-fab {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    background-color: #25D366;
+    border-radius: 50px; /* Diubah dari 50% menjadi 50px untuk mengakomodasi lebar teks */
+    padding: 10px 20px 10px 10px; /* Padding untuk ikon dan teks */
+    display: flex; /* Menggunakan flexbox untuk menata ikon dan teks */
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+    z-index: 100;
+    text-decoration: none;
+    color: #fff;
+    font-weight: 600;
+    font-size: 0.9em;
+    white-space: nowrap; /* Pastikan teks tidak patah baris */
+    transition: all 0.3s ease;
+}
+
+.whatsapp-fab:hover {
+    background-color: #1DA851;
+    transform: translateY(-3px);
+    box-shadow: 0 6px 15px rgba(0,0,0,0.3);
+}
+
+.whatsapp-fab img {
+    width: 30px;
+    height: 30px;
+    margin-right: 10px;
+}
+
+.whatsapp-fab .fab-text {
+    display: inline-block;
+    vertical-align: middle;
+}
+
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #e9ecef;
+    margin-top: 40px;
+}
+
+/* --- Gaya Tambahan untuk Halaman Properti & Peta --- */
+
+/* Header Halaman Semua Iklan */
+.page-header {
+    background-color: #007bff; /* Biru */
+    color: white;
+    padding: 40px 0;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.page-header h1 {
+    font-size: 2.8em;
+    margin-bottom: 10px;
+}
+
+.page-header p {
+    font-size: 1.1em;
+    opacity: 0.9;
+}
+
+/* Layout Kolom Properti */
+.property-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    margin-bottom: 40px;
+}
+
+.property-column {
+    flex: 1;
+    min-width: 350px; /* Lebar minimum untuk setiap kolom */
+    background-color: #fff;
+    padding: 25px;
+    border-radius: 10px;
+    box-shadow: 0 6px 12px rgba(0,0,0,0.08);
+}
+
+.property-column h2 {
+    font-size: 2em;
+    color: #0056b3;
+    border-bottom: 3px solid #28a745; /* Garis bawah hijau */
+    padding-bottom: 15px;
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+/* Kartu Listing Properti */
+.property-listing {
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+    margin-bottom: 25px;
+    overflow: hidden;
+    background-color: #fff;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+    transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+}
+
+.property-listing:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0,0,0,0.1);
+}
+
+.property-image {
+    width: 100%;
+    height: 220px; /* Tinggi gambar properti */
+    object-fit: cover;
+    display: block;
+}
+
+.property-listing h3 {
+    color: #333;
+    font-size: 1.5em;
+    margin: 15px 15px 5px 15px;
+}
+
+.property-listing p {
+    font-size: 1em;
+    line-height: 1.6;
+    margin: 0 15px 10px 15px;
+}
+
+.property-listing strong {
+    color: #0056b3;
+}
+
+.property-listing .coordinates {
+    font-size: 0.9em;
+    color: #888;
+    margin: 0 15px 15px 15px;
+    /* display: flex; REMOVED from here, now part of .listing-actions */
+    /* align-items: center; */
+    /* justify-content: space-between; */
+    /* flex-wrap: wrap; */
+}
+
+.show-on-map {
+    background-color: #28a744; /* Hijau yang lebih cerah */
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 0.85em;
+    font-weight: 600;
+    text-decoration: none; /* Make sure it's consistent if used as <a> */
+    transition: background-color 0.3s ease;
+    /* margin-top: 10px; REMOVED - managed by gap in .listing-actions */
+}
+
+.show-on-map:hover {
+    background-color: #218838;
+}
+
+/* START: Gaya Tambahan untuk Tombol Aksi Listing */
+/* Wrapper untuk tombol-tombol di dalam listing card */
+.listing-actions {
+    display: flex;
+    flex-wrap: wrap; /* Izinkan tombol untuk wrap di layar kecil */
+    gap: 10px; /* Jarak antar tombol */
+    padding: 0 15px 15px 15px; /* Padding bawah untuk kartu */
+    justify-content: center; /* Tengahkan tombol secara horizontal */
+    align-items: center;
+}
+
+/* Gaya dasar untuk tombol aksi baru, meniru show-on-map */
+.btn-action {
+    background-color: #4CAF50; /* Hijau default (akan ditimpa oleh warna spesifik) */
+    color: white;
+    border: none;
+    padding: 10px 15px; /* Consistent with show-on-map */
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 0.85em; /* Consistent with show-on-map */
+    font-weight: 600;
+    text-decoration: none; /* Hapus garis bawah default untuk link */
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    display: inline-flex; /* Agar ikon dan teks sejajar */
+    align-items: center;
+    justify-content: center;
+}
+
+.btn-action:hover {
+    transform: translateY(-2px); /* Efek terangkat saat hover */
+}
+
+/* Warna spesifik untuk tombol WhatsApp */
+.btn-whatsapp {
+    background-color: #25D366; /* Hijau WhatsApp */
+}
+.btn-whatsapp:hover {
+    background-color: #1DA851;
+}
+
+/* Warna spesifik untuk tombol Telepon */
+.btn-phone {
+    background-color: #007bff; /* Biru */
+}
+.btn-phone:hover {
+    background-color: #0056b3;
+}
+/* END: Gaya Tambahan untuk Tombol Aksi Listing */
+
+
+/* Gaya Peta */
+.map-section h2 {
+    text-align: center;
+    font-size: 2.5em;
+    color: #0056b3;
+    margin-top: 50px;
+    margin-bottom: 30px;
+    border-bottom: 3px solid #28a745;
+    padding-bottom: 15px;
+}
+
+#map {
+    height: 650px; /* Tinggi peta yang besar dan jelas */
+    width: 100%;
+    border-radius: 10px;
+    box-shadow: 0 6px 15px rgba(0,0,0,0.15);
+    margin-bottom: 50px;
+}
+
+/* START: Gaya Tambahan untuk Formulir Pendaftaran Jasa --- */
+.registration-section {
+    margin-top: 40px;
+    margin-bottom: 50px;
+    text-align: center;
+}
+
+.registration-card {
+    background-color: #e6f7ff; /* Warna biru muda yang lebih cerah */
+    border: 2px solid #a0d9ff; /* Border biru yang lebih gelap */
+    border-radius: 12px;
+    padding: 30px;
+    box-shadow: 0 8px 16px rgba(0,0,0,0.1);
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+.registration-card h2 {
+    font-size: 2.2em;
+    color: #0056b3;
+    margin-bottom: 20px;
+}
+
+.registration-card p {
+    font-size: 1.1em;
+    color: #555;
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+.btn-register-jasa {
+    display: inline-block;
+    background-color: #28a745; /* Hijau */
+    color: white;
+    padding: 15px 30px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 1.2em;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.btn-register-jasa:hover {
+    background-color: #218838;
+    transform: translateY(-2px);
+}
+
+.registration-card .note {
+    font-size: 0.9em;
+    color: #cc0000; /* Merah untuk peringatan */
+    margin-top: 25px;
+    font-weight: 500;
+}
+/* END: Gaya Tambahan untuk Formulir Pendaftaran Jasa --- */
+
+
+/* Responsivitas Utama */
+@media (max-width: 992px) {
+    .property-grid {
+        flex-direction: column; /* Ubah kolom menjadi tumpukan vertikal */
+    }
+
+    .property-column {
+        min-width: unset;
+        width: 100%;
+    }
+
+    .page-header h1 {
+        font-size: 2.2em;
+    }
+
+    .page-header p {
+        font-size: 1em;
+    }
+
+    #map {
+        height: 500px;
+    }
+}
+
+@media (max-width: 768px) {
+    /* Header & Navigasi Mobile */
+    header .container {
+        flex-direction: row; /* Kembali ke baris untuk logo dan toggle */
+        flex-wrap: wrap;
+        justify-content: space-between;
+        align-items: center;
+    }
+    .logo {
+        margin-right: auto; /* Dorong logo ke kiri */
+    }
+    .menu-toggle {
+        display: flex; /* Tampilkan hamburger */
+        margin-left: 15px;
+        order: 2; /* Agar hamburger di kanan logo */
+    }
+    .btn-iklan {
+        order: 3; /* Pindahkan btn-iklan ke baris berikutnya di bawah */
+        flex-basis: 100%;
+        text-align: center;
+        margin-top: 15px;
+        font-size: 0.9em;
+        padding: 8px 15px;
+    }
+
+    /* Navigasi Mobile */
+    nav.main-nav {
+        position: absolute;
+        top: 60px; /* Di bawah header */
+        left: 0;
+        width: 100%;
+        background-color: #f8f8f8;
+        box-shadow: 0 5px 10px rgba(0,0,0,0.1);
+        transform: translateX(-100%); /* Sembunyikan ke kiri */
+        transition: transform 0.3s ease-in-out;
+        z-index: 999;
+        opacity: 0;
+        visibility: hidden;
+    }
+    nav.main-nav.active {
+        transform: translateX(0);
+        opacity: 1;
+        visibility: visible;
+    }
+    nav.main-nav ul {
+        flex-direction: column;
+        width: 100%;
+        padding: 10px 0;
+    }
+    nav.main-nav ul li {
+        margin: 0;
+        border-bottom: 1px solid #eee;
+    }
+    nav.main-nav ul li:last-child {
+        border-bottom: none;
+    }
+    nav.main-nav ul li a {
+        display: block;
+        padding: 12px 20px;
+        color: #555;
+    }
+    nav.main-nav ul li a:hover {
+        background-color: #e9ecef;
+    }
+
+    /* Animasi ikon hamburger */
+    .menu-toggle.active .hamburger:nth-child(1) {
+        transform: translateY(11px) rotate(45deg);
+    }
+    .menu-toggle.active .hamburger:nth-child(2) {
+        opacity: 0;
+    }
+    .menu-toggle.active .hamburger:nth-child(3) {
+        transform: translateY(-11px) rotate(-45deg);
+    }
+
+    /* FAB Mobile */
+    .whatsapp-fab {
+        width: 50px;
+        height: 50px;
+        bottom: 20px;
+        right: 20px;
+        padding: 8px 15px 8px 8px; /* Padding lebih kecil di mobile */
+        font-size: 0.8em;
+    }
+    .whatsapp-fab img {
+        width: 25px;
+        height: 25px;
+        margin-right: 8px;
+    }
+
+    /* Properti Listing Mobile */
+    .property-listing h3 {
+        font-size: 1.3em;
+    }
+    .property-listing p {
+        font-size: 0.9em;
+    }
+    .property-listing .coordinates {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    /* Tombol Aksi Listing Mobile */
+    .listing-actions {
+        flex-direction: column; /* Tumpuk tombol vertikal */
+        align-items: stretch;
+    }
+    .show-on-map, .btn-action { /* Apply to both old and new buttons */
+        width: 100%;
+        margin-top: 0; /* Remove specific margin, rely on gap */
+    }
+
+    /* Pendaftaran Jasa Mobile */
+    .registration-card {
+        padding: 25px;
+    }
+    .registration-card h2 {
+        font-size: 1.8em;
+    }
+    .registration-card p {
+        font-size: 1em;
+    }
+    .btn-register-jasa {
+        padding: 12px 25px;
+        font-size: 1em;
+    }
+
+    .map-section h2 {
+        font-size: 2em;
+    }
+
+    #map {
+        height: 400px;
+    }
+}
+
+@media (max-width: 480px) {
+    .container {
+        width: 95%;
+    }
+    .page-header h1 {
+        font-size: 1.8em;
+    }
+    .page-header p {
+        font-size: 0.9em;
+    }
+    .property-column {
+        padding: 15px;
+    }
+    .property-listing h3 {
+        font-size: 1.1em;
+    }
+    .property-listing p, .property-listing .coordinates {
+        font-size: 0.85em;
+    }
+    /* Tombol Aksi Listing Sangat Kecil */
+    .show-on-map, .btn-action {
+        padding: 8px 10px;
+        font-size: 0.8em;
+    }
+    /* Pendaftaran Jasa Sangat Kecil */
+    .registration-card {
+        padding: 20px;
+    }
+    .registration-card h2 {
+        font-size: 1.5em;
+    }
+    .registration-card p {
+        font-size: 0.9em;
+    }
+    .btn-register-jasa {
+        width: 100%;
+        padding: 10px 0;
+    }
+    #map {
+        height: 300px;
+    }
+}
+
